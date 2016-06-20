@@ -1,0 +1,2 @@
+test/bootstrap.js
+test/**/*.spec.js

@@ -1,0 +1,20 @@
+{
+  "name": "mr-roboto",
+  "version": "1.0.0",
+  "description": "An open source intelisence robot that uses johnny five.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Joe Puzzo",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^0.9.56"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "mock-firmata": "0.0.7",
+    "sinon": "^1.17.4"
+  }
+}
