@@ -22,6 +22,10 @@ board.on("ready", function() {
     pin2: 4
   });
 
+  enco.on( "data", ( data ) => {
+    console.log( data );
+  })
+
   // "data" get the current reading from the potentiometer
   potentiometer.on("data", move );
 
