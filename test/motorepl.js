@@ -1,9 +1,15 @@
 var five = require("johnny-five");
 let Encoder = require("../lib/encoder");
+let SerialPort = require("serialport").SerialPort;
 
 var board, motor1, motor2;
 
-board = new five.Board();
+board = new five.Board( { 
+    port: new SerialPort( '/dev/ttyACM0', {
+      baudrate: 115200, 
+      bufferSize: 256
+    })
+});
 
 board.on("ready", function() {
 

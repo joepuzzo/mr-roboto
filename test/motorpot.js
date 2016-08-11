@@ -15,10 +15,10 @@ board = new five.Board({
 
 board.on("ready", function() {
 
-  console.log( "Sample Interval:",this.io.getSamplingInterval() );
-  this.samplingInterval( 19 );
-  console.log( "Sample Interval:",this.io.getSamplingInterval() );
-  console.log( board.port );
+  //console.log( "Sample Interval:",this.io.getSamplingInterval() );
+  //this.samplingInterval( 19 );
+  //console.log( "Sample Interval:",this.io.getSamplingInterval() );
+  //console.log( board.port );
 
   // Create a new `potentiometer` hardware instance.
   potentiometer = new five.Sensor({
@@ -48,13 +48,11 @@ board.on("ready", function() {
   });
 
   let enco1 = new Encoder({
-    //freq: 500,
     pin1: 2,
     pin2: 4
   });
 
   let enco2 = new Encoder({
-    //freq: 2000,
     pin1: 12,
     pin2: 13
   });
@@ -64,9 +62,9 @@ board.on("ready", function() {
     console.log( "ENCO1:", data, "Speed:", speed );
   })
 
-  /*enco2.on( "data", ( data ) => {
+  enco2.on( "data", ( data ) => {
     console.log( "ENCO2:", data );
-  })*/
+  })
 
 
   // "data" get the current reading from the potentiometer
